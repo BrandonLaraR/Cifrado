@@ -1,0 +1,57 @@
+/* Estilo para el header */
+.header {
+  display: flex;
+  justify-content: space-between; /* Alinea el contenido de izquierda a derecha */
+  align-items: center; /* Centra verticalmente */
+  padding: 1rem;
+  background-color: #f8f9fa; /* Color de fondo opcional */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+}
+
+/* Estilo para el nav */
+nav {
+  display: flex; /* Usa flexbox para el nav */
+}
+
+nav a {
+  margin-left: 1rem; /* Espacio entre enlaces */
+  color: #111111; /* Color de los enlaces */
+  text-decoration: none; /* Sin subrayado */
+  padding: 0.5rem 1rem; /* Espaciado interno para mejor clicabilidad */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+nav a:hover {
+  background-color: #19191a; /* Fondo azul al pasar el mouse */
+  color: white; /* Texto blanco al pasar el mouse */
+}
+
+/* Estilo para el footer */
+footer {
+  background-color: #f4f4f4;
+  color: rgb(12, 8, 8);
+  text-align: center;
+  padding: 15px 0;
+  position: relative; /* Cambiar a fixed para que se mantenga en la parte inferior */
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* Asegúrate de que el body ocupe toda la altura */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+}
+
+/* Contenedor principal */
+.container {
+  flex: 1; /* Permite que el contenedor principal ocupe el espacio disponible */
+}
+
+/* Footer adicional (opcional) */
+footer p {
+  margin: 0;
+}

@@ -1,0 +1,75 @@
+.component-container {
+  max-width: 800px; /* Ancho máximo igual que en César */
+  margin: auto; /* Centrado automático */
+  padding: 2rem; /* Espaciado interno */
+  text-align: center; /* Centrado del texto */
+}
+
+.card {
+  background-color: #ffffff; /* Fondo blanco para las tarjetas */
+  border: 1px solid #ddd; /* Bordes grises */
+  border-radius: 10px; /* Bordes redondeados */
+  margin: 1.5rem 0; /* Espaciado entre tarjetas */
+  padding: 1.5rem; /* Espaciado interno */
+  cursor: pointer; /* Cambiar el cursor al pasar por encima */
+  transition: box-shadow 0.3s, transform 0.3s; /* Efecto de transición */
+}
+
+.card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra al pasar el mouse */
+  transform: translateY(-2px); /* Levantar un poco la tarjeta */
+}
+
+.card h2 {
+  margin: 0; /* Eliminar margen superior */
+  color: #007BFF; /* Color del texto del título */
+}
+
+.card-info {
+  margin-top: 0.5rem; /* Espaciado entre título y contenido */
+  color: #555; /* Color del texto de información */
+  font-size: 0.9rem; /* Tamaño de fuente reducido */
+}
+
+.hidden {
+  display: none; /* Ocultar elementos con esta clase */
+}
+
+.form-container {
+  margin-top: 2rem; /* Espaciado superior */
+}
+
+.form-group {
+  margin-bottom: 1.5rem; /* Espaciado entre grupos de formulario */
+}
+
+input {
+  margin: 0.5rem 0; /* Espaciado entre inputs */
+  padding: 0.5rem; /* Espaciado interno en inputs */
+  width: 100%; /* Ancho completo para inputs */
+  max-width: 400px; /* Ancho máximo para inputs */
+  border: 1px solid #ccc; /* Bordes de los inputs */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+button {
+  margin-top: 1rem; /* Espaciado superior para el botón */
+  padding: 0.5rem 1rem; /* Espaciado interno en el botón */
+  background-color: #007BFF; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Sin bordes */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+button:hover {
+  background-color: #0056b3; /* Color del botón al pasar el mouse */
+}
+
+.result {
+  margin-top: 1.5rem; /* Espaciado superior para resultados */
+}
+
+.button-group button {
+  margin-right: 1rem; /* Espaciado entre botones del grupo */
+}

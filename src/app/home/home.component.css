@@ -1,0 +1,36 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.card h2 {
+  margin: 0;
+  color: #007BFF;
+}
+
+.card-info {
+  margin-top: 0.5rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none; /* Oculta el contenido */
+}

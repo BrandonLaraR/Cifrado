@@ -1,0 +1,67 @@
+<div class="component-container">
+  <h2>Cifrado Escitala</h2>
+
+  <!-- Acordeón -->
+  <div class="accordion">
+    <div class="card" (click)="toggleInfo(1)">
+      <h2>¿Qué es el cifrado Escitala?</h2>
+      <div [class.hidden]="selectedCard !== 1" class="card-info">
+        <p>El cifrado Escitala es un método de cifrado que utiliza una cinta enrollada en un cilindro para cifrar mensajes. Para descifrar el mensaje, se necesita el cilindro del mismo diámetro.</p>
+      </div>
+    </div>
+
+    <div class="card" (click)="toggleInfo(2)">
+      <h2>¿Cómo codificar con Escitala?</h2>
+      <div [class.hidden]="selectedCard !== 2" class="card-info">
+        <p>Coloca el mensaje en una cinta, que luego se enrolla alrededor del cilindro. El mensaje se leerá de arriba a abajo, formando una columna en el cilindro.</p>
+      </div>
+    </div>
+
+    <div class="card" (click)="toggleInfo(3)">
+      <h2>¿Cómo descifrar el cifrado Escitala?</h2>
+      <div [class.hidden]="selectedCard !== 3" class="card-info">
+        <p>Para descifrar el mensaje, desenrolla la cinta y lee el mensaje en la dirección correspondiente. Necesitas conocer el número de columnas utilizadas.</p>
+      </div>
+    </div>
+
+    <div class="card" (click)="toggleInfo(4)">
+      <h2>¿Cómo se reconoce el cifrado Escitala?</h2>
+      <div [class.hidden]="selectedCard !== 4" class="card-info">
+        <p>Un texto cifrado con Escitala puede ser identificado por su formato en columnas, que a menudo no se puede leer sin el cilindro adecuado.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Formulario de cifrado -->
+  <div class="form-container">
+    <p>
+      Ingresa el mensaje que quieras cifrar o descifrar, así como el número de columnas
+      para llevar a cabo el cifrado o descifrado.
+    </p>
+    <form>
+      <div class="form-group">
+        <label for="messageInput">Ingrese Un Mensaje</label>
+        <input id="messageInput" #messageInput placeholder="Ingrese el mensaje" />
+      </div>
+
+      <div class="form-group">
+        <label for="keyInput">Número de columnas</label>
+        <input id="keyInput" #keyInput type="number" placeholder="Número de columnas" />
+      </div>
+
+      <div class="button-group">
+        <button (click)="onEncrypt(messageInput, keyInput, $event)">Cifrar</button>
+        <button (click)="onDecrypt(keyInput, $event)">Descifrar</button>
+        <button type="button" (click)="onClearFields(messageInput, keyInput)">Limpiar</button> <!-- Botón Limpiar -->
+      </div>
+    </form>
+
+    <div class="result">
+      <h3>Mensaje Cifrado:</h3>
+      <p>{{ encryptedMessage }}</p>
+
+      <h3>Mensaje Descifrado:</h3>
+      <p>{{ decryptedMessage }}</p>
+    </div>
+  </div>
+</div>

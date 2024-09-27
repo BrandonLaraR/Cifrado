@@ -1,0 +1,68 @@
+<div class="cesar-container">
+  <h1>Cifrado César</h1>
+
+  <!-- Acordeón -->
+  <div class="accordion">
+    <div class="card" (click)="toggleInfo(1)">
+      <h2>¿Qué es el código César?</h2>
+      <div [class.hidden]="selectedCard !== 1" class="card-info">
+        <p>Es un tipo de cifrado por sustitución en el que cada letra del texto es reemplazada por otra que se encuentra un número fijo de posiciones más adelante en el alfabeto.</p>
+      </div>
+    </div>
+
+    <div class="card" (click)="toggleInfo(2)">
+      <h2>¿Cómo codificar con el cifrado de César?</h2>
+      <div [class.hidden]="selectedCard !== 2" class="card-info">
+        <p>Selecciona un desplazamiento y usa ese número para mover las letras del mensaje hacia adelante en el alfabeto.</p>
+      </div>
+    </div>
+
+    <div class="card" (click)="toggleInfo(3)">
+      <h2>¿Cómo descifrar el cifrado César?</h2>
+      <div [class.hidden]="selectedCard !== 3" class="card-info">
+        <p>Para descifrar un mensaje cifrado con César, usa el mismo número de desplazamiento pero en dirección contraria.</p>
+      </div>
+    </div>
+
+    <div class="card" (click)="toggleInfo(4)">
+      <h2>¿Cómo reconocer el código César?</h2>
+      <div [class.hidden]="selectedCard !== 4" class="card-info">
+        <p>Un texto cifrado con César mantiene las letras originales pero en un orden desplazado, haciendo fácil reconocer patrones al comparar el alfabeto.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Formulario de cifrado -->
+  <div class="form-container">
+    <h2>Cifrado César</h2>
+    <p>
+      Ingresa el mensaje que quieras cifrar o descifrar, así como la clave (desplazamiento)
+      para llevar a cabo el cifrado o descifrado. Los espacios en blanco no se tomarán en cuenta.
+    </p>
+    <form>
+      <div class="form-group">
+        <label for="messageInput">Ingrese Un Mensaje</label>
+        <input id="messageInput" #messageInput placeholder="Ingrese el mensaje" />
+      </div>
+
+      <div class="form-group">
+        <label for="keyInput">Desplazamiento (0-25)</label>
+        <input id="keyInput" #keyInput type="number" placeholder="Desplazamiento (0-25)" />
+      </div>
+
+      <div class="button-group">
+        <button (click)="onEncrypt(messageInput, keyInput, $event)">Cifrar</button>
+        <button (click)="onDecrypt(keyInput, $event)">Descifrar</button>
+        <button type="button" (click)="onClearFields(messageInput, keyInput)">Limpiar</button> <!-- Botón Limpiar -->
+      </div>
+    </form>
+
+    <div class="result">
+      <h3>Mensaje Cifrado:</h3>
+      <p>{{ encryptedMessage }}</p>
+
+      <h3>Mensaje Descifrado:</h3>
+      <p>{{ decryptedMessage }}</p>
+    </div>
+  </div>
+</div>
