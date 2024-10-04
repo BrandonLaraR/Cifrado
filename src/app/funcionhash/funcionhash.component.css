@@ -1,0 +1,70 @@
+.container {
+  max-width: 800px;        /* Limita el ancho máximo del contenedor */
+  margin: auto;            /* Centra el contenedor en la página */
+  padding: 2rem;          /* Espacio interno alrededor del contenido */
+  text-align: center;      /* Centra el texto dentro del contenedor */
+}
+
+button {
+  margin-top: 1rem;        /* Espacio superior entre botones */
+  padding: 0.5rem 1rem;    /* Relleno interno de los botones */
+  background-color: #007BFF; /* Color de fondo de los botones */
+  color: white;            /* Color del texto del botón */
+  border: none;            /* Sin borde */
+  border-radius: 4px;     /* Bordes redondeados */
+  cursor: pointer;         /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s; /* Transición suave para el cambio de color */
+}
+
+button:hover {
+  background-color: #0056b3; /* Color de fondo en hover */
+}
+
+input, select {
+  margin: 0.5rem 0;       /* Espacio entre los inputs */
+  padding: 0.5rem;        /* Relleno interno de los inputs */
+  width: 100%;            /* Ancho completo del input */
+  max-width: 300px;       /* Ancho máximo del input */
+  border: 1px solid #ccc; /* Borde del input */
+  border-radius: 4px;     /* Bordes redondeados */
+}
+
+/* Estilos para hacer que el diseño sea responsivo */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;        /* Espacio interno menor en pantallas pequeñas */
+  }
+
+  button {
+    width: 100%;          /* Botones ocupan el ancho completo en pantallas pequeñas */
+  }
+
+  input, select {
+    width: 100%;          /* Inputs ocupan el ancho completo en pantallas pequeñas */
+  }
+}
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.card h2 {
+  margin: 0;
+  color: #007BFF;
+}
+
+.card-info {
+  margin-top: 0.5rem;
+  color: #555;
+  font-size: 0.9rem;
+}

@@ -2,7 +2,68 @@
   <h1>Bienvenido a la Aplicación de Cifrado</h1>
   <p>Seleccione una opción de cifrado en el menú de navegación para comenzar.</p>
 
-  <div class="card">
+  <div class="card" (click)="toggleInfo(3)">
+    <h2>Justificación de la Elección de Angular</h2>
+    <div class="info-section">
+      <h3>Introducción</h3>
+      <p>
+        En el desarrollo de aplicaciones web modernas que requieren implementación de métodos de cifrado,
+        la elección del framework es crucial. Este documento justifica la selección de Angular
+        considerando aspectos de rendimiento y facilidad de implementación.
+      </p>
+
+      <h3>Comparación de Angular y Next.js</h3>
+      <table class="w-full border-collapse">
+        <thead>
+          <tr>
+            <th class="border-b-2 w-[200px]">Criterio</th>
+            <th class="border-b-2">Angular</th>
+            <th class="border-b-2">Next.js</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border-b font-medium">Rendimiento</td>
+            <td class="border-b">Bueno, aunque puede ser más pesado debido a su naturaleza de SPA completa.</td>
+            <td class="border-b">Excelente, gracias al renderizado del lado del servidor (SSR).</td>
+          </tr>
+          <tr>
+            <td class="border-b font-medium">Facilidad de implementación</td>
+            <td class="border-b">Moderada. Angular tiene una curva de aprendizaje más pronunciada.</td>
+            <td class="border-b">Alta. React y Next.js tienen una curva de aprendizaje más suave.</td>
+          </tr>
+          <tr>
+            <td class="border-b font-medium">Ecosistema y bibliotecas</td>
+            <td class="border-b">Ecosistema robusto pero más limitado.</td>
+            <td class="border-b">Amplio ecosistema de React.</td>
+          </tr>
+          <tr>
+            <td class="border-b font-medium">Seguridad</td>
+            <td class="border-b">Buena, pero requiere más atención en la protección de lógica del lado del cliente.</td>
+            <td class="border-b">Buena. SSR reduce la exposición de lógica sensible al cliente.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Justificación de la Elección de Angular</h3>
+      <ol class="list-decimal pl-5 space-y-2">
+        <li><strong>Rendimiento Adecuado:</strong> Angular ofrece un rendimiento adecuado para aplicaciones que manejan operaciones criptográficas.</li>
+        <li><strong>Facilidad de Implementación:</strong> Angular permite una implementación estructurada de métodos de cifrado.</li>
+        <li><strong>Arquitectura Sólida:</strong> Facilita el desarrollo escalable y el mantenimiento de aplicaciones.</li>
+        <li><strong>Ecosistema Estable:</strong> Incluye herramientas y bibliotecas robustas para métodos de cifrado.</li>
+        <li><strong>Seguridad Focalizada:</strong> Mejora la protección de la lógica del lado del cliente.</li>
+      </ol>
+
+      <h3>Conclusión</h3>
+      <p>
+        Angular se presenta como una opción adecuada para el desarrollo de aplicaciones web que requieren
+        la implementación de métodos de cifrado, proporcionando una base robusta para construir aplicaciones
+        seguras y eficientes con capacidades criptográficas avanzadas.
+      </p>
+    </div>
+  </div>
+
+  <div class="card" (click)="toggleInfo(1)">
     <h2>Cifrado César</h2>
     <div class="info-section">
       <h3>¿Qué es?</h3>
@@ -16,7 +77,7 @@
     </div>
   </div>
 
-  <div class="card">
+  <div class="card" (click)="toggleInfo(2)">
     <h2>Cifrado Escitala</h2>
     <div class="info-section">
       <h3>¿Qué es?</h3>

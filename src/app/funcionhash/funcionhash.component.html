@@ -1,0 +1,48 @@
+<div class="container">
+  <h2>SHA-3 Hashing</h2>
+
+
+
+     <!-- Acordeón -->
+ <div class="accordion">
+  <div class="card">
+    <h2>¿Qué es el SHA-3 (Secure Hash Algorithm 3)?</h2>
+    <div class="card-info">
+      <p>
+        SHA-3 (Secure Hash Algorithm 3) es una función de hash criptográfica desarrollada por el Instituto Nacional de Estándares y Tecnología (NIST) de EE. UU. y publicada en 2015</p>
+    </div>
+    <div class="card-info">
+      <p>Longitudes de Hash: SHA-3 admite múltiples longitudes de salida, incluyendo SHA3-224, SHA3-256, SHA3-384 y SHA3-512, lo que permite a los usuarios seleccionar la longitud de hash adecuada según sus necesidades.</p>
+    </div>
+  </div>
+</div>
+
+  <div>
+    <label for="hashType">Seleccionar tipo de hash:</label>
+    <select id="hashType" (change)="onHashTypeChange($event)">
+      <option value="SHA3-224">SHA3-224</option>
+      <option value="SHA3-256">SHA3-256</option>
+      <option value="SHA3-384">SHA3-384</option>
+      <option value="SHA3-512">SHA3-512</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="inputMessage">Mensaje:</label>
+    <input
+      id="inputMessage"
+      type="text"
+      #messageInput
+      placeholder="Ingrese el mensaje"
+      (input)="inputMessage = messageInput.value"
+    />
+  </div>
+
+  <button (click)="hashMessage()">Generar Hash</button>
+
+  <h3>Mensaje Hashed:</h3>
+  <p>{{ hashedMessage }}</p>
+
+  <!-- Botón para limpiar todos los campos -->
+  <button (click)="clearFields()">Limpiar Todo</button>
+</div>

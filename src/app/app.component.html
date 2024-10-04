@@ -1,14 +1,16 @@
 <div class="header">
-  <h1>{{ title }}</h1>
-  <nav>
-      <a routerLink="/">Inicio</a>
-      <a routerLink="/cesar">Cifrado César</a>
-      <a routerLink="/escitala">Cifrado Escitala</a>
+  <h1 routerLink="/">{{ title }}</h1>
+  <button class="menu-toggle" (click)="toggleMenu()">
+    &#9776; <!-- Icono de tres barras -->
+  </button>
+  <nav [class.active]="menuActive">
+    <a routerLink="/" (click)="closeMenu()">Inicio</a>
+    <a routerLink="/cesar" (click)="closeMenu()">Cifrado César</a>
+    <a routerLink="/escitala" (click)="closeMenu()">Cifrado Escitala</a>
+    <a routerLink="/metodos" (click)="closeMenu()">Métodos</a>
   </nav>
 </div>
 <router-outlet></router-outlet>
 <footer>
   <p>Derechos reservados © {{ currentYear }} - Brandon Armando Lara Rosas 7° "B"</p>
 </footer>
-
-

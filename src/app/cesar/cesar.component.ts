@@ -10,7 +10,7 @@ export class CesarComponent {
   key: number = 0;
   encryptedMessage: string = '';
   decryptedMessage: string = '';
-  selectedCard: number | null = null;  // Variable para controlar qué tarjeta (acordeón) está abierta
+  selectedCard: number | null = null;
 
   encrypt(message: string, key: number): string {
     return message.split('').map(char => {

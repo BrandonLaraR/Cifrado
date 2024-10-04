@@ -1,0 +1,46 @@
+<div class="container">
+  <h1>Bienvenido a la Parte de los Métodos Asimétricos</h1>
+  <p>Seleccione una opción de los Métodos Asimétricos</p>
+
+  <div class="card">
+    <h2>blowfish</h2>
+    <div class="info-section">
+      <h3>¿Qué es?</h3>
+      <p>Es un codificador de bloques simétricos, diseñado por Bruce Schneier en 1993 e incluido en un gran número de conjuntos de codificadores y productos de cifrado. No se han encontrado técnicas de criptoanálisis efectivas contra el Blowfish.</p>
+
+      <h3>¿Cómo se originó?</h3>
+      <p>Blowfish es un algoritmo de cifrado creado por Bruce Schneier en 1993. Fue diseñado como una alternativa rápida y gratuita a los cifrados existentes. Sus características principales son: es un cifrado de bloque simétrico, usa claves de 32 a 448 bits, y está optimizado para sistemas de 32 bits.</p>
+
+      <h3>¿Saber más?</h3>
+      <p> Se ha utilizado en compresión de archivos, VPNs y almacenamiento de contraseñas. A pesar de seguir considerándose seguro, su tamaño de bloque de 64 bits se ve como una limitación hoy en día.</p>
+      <button (click)="goToBlowfish()">Empezar</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>ElGamal</h2>
+    <div class="info-section">
+      <h3>¿Qué es?</h3>
+      <p>El cifrado ElGamal es un esquema de cifrado asimétrico basado en la dificultad del problema del logaritmo discreto.</p>
+
+      <h3>¿Cómo se originó?</h3>
+      <p>Fue creado por Taher ElGamal en 1985 y es usado en varios sistemas de cifrado, incluido el sistema de firma digital.</p>
+
+      <h3>¿Saber más?</h3>
+      <p>ElGamal es importante en la criptografía moderna por su seguridad y resistencia a ataques.</p>
+    </div>
+    <!-- Botón para navegar a la página de ElGamal -->
+    <button (click)="goToElGamal()">Empezar</button>
+  </div>
+
+  <div class="card">
+    <h2>FuncionHash</h2>
+    <div class="info-section">
+      <h3>¿Qué es?</h3>
+      <p>SHA-3 es la última versión de la familia de funciones hash SHA. Ofrece cuatro longitudes de salida: SHA3-224, SHA3-256, SHA3-384 y SHA3-512, proporcionando diferentes niveles de seguridad.</p>
+    </div>
+    <!-- Botón para navegar a la página de ElGamal -->
+    <button (click)="goTofuncionhash()">Empezar</button>
+  </div>
+
+</div>

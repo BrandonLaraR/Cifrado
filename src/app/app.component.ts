@@ -11,7 +11,16 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'Cifrado';
+  menuActive = false; // Estado del menú
+
   get currentYear(): number {
     return new Date().getFullYear();
+  }
+
+  toggleMenu() {
+    this.menuActive = !this.menuActive; // Cambia el estado del menú
+  }
+  closeMenu() {
+    this.menuActive = false; // Cierra el menú
   }
 }

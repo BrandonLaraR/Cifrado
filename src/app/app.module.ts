@@ -4,6 +4,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { CesarComponent } from './cesar/cesar.component';
 import { EscitalaComponent } from './escitala/escitala.component';
+import { MetodosComponent } from './metodos/metodos.component';
+import { ElgamalComponent } from './elgamal/elgamal.component';
+import { BlowfishComponent } from './blowfish/blowfish.component';
+import { FuncionhashComponent } from './funcionhash/funcionhash.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -11,7 +15,11 @@ import { CommonModule } from '@angular/common';
   declarations: [
     HomeComponent,
     CesarComponent,
-    EscitalaComponent
+    EscitalaComponent,
+    MetodosComponent,
+    ElgamalComponent,
+    BlowfishComponent,
+    FuncionhashComponent
   ],
   imports: [
     BrowserModule,

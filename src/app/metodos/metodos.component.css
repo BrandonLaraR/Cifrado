@@ -4,7 +4,6 @@
   padding: 2rem;
   text-align: center;
 }
-
 .card {
   background-color: #ffffff;
   border: 1px solid #ddd;
@@ -31,34 +30,3 @@
   font-size: 0.9rem;
 }
 
-.hidden {
-  display: none; /* Oculta el contenido */
-}
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.prose {
-  text-align: left;
-}
-
-h2 {
-  margin-top: 2rem;
-}
-
-.table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-th {
-  background-color: #f2f2f2;
-}

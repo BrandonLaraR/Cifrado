@@ -1,0 +1,70 @@
+<div class="container">
+  <h2>Cifrado Blowfish</h2>
+
+
+ <!-- Acordeón -->
+ <div class="accordion">
+  <div class="card">
+    <h2>¿Qué es el Blowfish?</h2>
+    <div class="card-info">
+      <p>Blowfish es un algoritmo de cifrado simétrico creado por Bruce Schneier en 1993. Aquí tienes un resumen de sus características:
+        Cifrado Simétrico: Usa la misma clave para cifrar y descifrar datos.
+        Tamaño de Clave Variable: Permite claves de 32 a 448 bits.
+        Bloques de Datos: Cifra datos en bloques de 64 bits.
+        Rápido y Eficiente: Diseñado para un rendimiento rápido, especialmente en hardware.
+        S-Boxes: Utiliza tablas de búsqueda para mejorar la velocidad.
+        Seguridad: Aunque se considera seguro, se recomienda usar claves de al menos 128 bits.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Input para mensaje -->
+  <div>
+    <label for="input-message">Ingrese un Mensaje a cifrar:</label>
+    <input
+      id="input-message"
+      type="text"
+      #messageInput
+      placeholder="Ingrese el mensaje"
+    />
+  </div>
+
+  <!-- Input para clave -->
+  <div>
+    <label for="key-input">Ingrese una Clave:</label>
+    <input
+      id="key-input"
+      type="text"
+      #keyInput
+      placeholder="Ingrese la clave"
+    />
+  </div>
+
+  <!-- Botones para cifrar y descifrar -->
+  <button (click)="encryptMessage(messageInput.value, keyInput.value)">Cifrar Mensaje</button>
+  <div>
+  </div>
+  <button (click)="decryptMessage(messageInput.value, keyInput.value)">Descifrar Mensaje</button>
+
+  <!-- Resultado de cifrado/descifrado -->
+  <h3>Resultado:</h3>
+  <p>{{ output }}</p>
+
+  <!-- Mensaje de error si existe -->
+  <div *ngIf="error" class="error-message">
+    <p>{{ error }}</p>
+  </div>
+
+  <!-- Botón para limpiar todo -->
+  <button (click)="clearFields(messageInput, keyInput)">Limpiar Todo</button>
+</div>
